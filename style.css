@@ -1,0 +1,295 @@
+@font-face {
+    font-family: "ModelistaSignature";
+    src: url("fonts/Modelistasignature-ownAV.otf") format("opentype");
+}
+
+body {
+    margin: 0;
+    font-family: 'Raleway', Arial, sans-serif;
+    background-color: #d9dfcc;
+    color: #2d2d2d;
+}
+
+/* ── NAVIGATION ── */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(217,223,204,0.95);
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+.menu-icon {
+    font-size: 35px;
+    cursor: pointer;
+}
+
+#menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    margin: 10px 0;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #2d2d2d;
+    font-size: 18px;
+}
+
+/* ── DROPDOWN ── */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #d9dfcc;
+    min-width: 180px;
+    padding: 10px;
+    list-style: none;
+    border-radius: 10px;
+    z-index: 2000;
+}
+
+.dropdown-content li {
+    margin: 5px 0;
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    color: #2d2d2d;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ── HERO ── */
+
+.hero {
+    height: 100vh;
+    background-image: url("Bilder/home-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    text-align: center;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.hero h1 {
+    font-family: "ModelistaSignature", cursive;
+    font-size: 105px;
+    letter-spacing: 4px;
+    font-weight: normal;
+    color: #2d2d2d;
+}
+
+.hero p {
+    font-size: 25px;
+}
+
+/* ── ABOUT ── */
+
+.about {
+    display: block;
+    overflow: hidden;
+}
+
+.about-logo {
+    width: 250px;
+    display: block;
+    margin: 80px auto 10px auto;
+}
+
+.about-title {
+    padding-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: "ModelistaSignature", cursive;
+    font-size: 80px;
+    font-weight: normal;
+}
+
+.about-text {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.8;
+    font-size: 20px;
+}
+
+/* ── MISSION ── */
+
+.mission {
+    display: block;
+    padding-top: 90px;
+    padding-bottom: 150px;
+    overflow: hidden;
+}
+
+.mission-title {
+    padding-top: 50px;
+    text-align: center;
+    font-family: "ModelistaSignature", cursive;
+    font-size: 80px;
+    font-weight: normal;
+}
+
+.mission-text {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.8;
+    font-size: 20px;
+}
+
+/* ── GALLERY ── */
+
+.gallery-title {
+    padding-top: 50px;
+    text-align: center;
+    font-family: "ModelistaSignature", cursive;
+    font-size: 80px;
+    font-weight: normal;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* ── FULLSCREEN ── */
+
+#fullscreen {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+#fullscreen-img {
+    max-width: 90%;
+    max-height: 75%;
+}
+
+#stars {
+    margin-top: 15px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+}
+
+#stars span {
+    transition: 0.2s;
+}
+
+#stars span.active {
+    color: gold;
+}
+
+#close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 45px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ── CONTACT ── */
+
+.contact {
+    padding-top: 150px;
+    text-align: center;
+}
+
+form {
+    width: 300px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #a6b38b;
+    cursor: pointer;
+}
+
+/* ── NAVIGATION ARROWS ── */
+
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+.left  { left: 20px; }
+.right { right: 20px; }
+
+/* ── CATEGORY / SECTION TITLES ── */
+
+.category-title {
+    margin-top: 90px;
+    text-align: center;
+    font-family: "ModelistaSignature", cursive;
+    font-size: 80px;
+    font-weight: normal;
+}
+
+.section-title {
+    text-align: center;
+    font-family: "ModelistaSignature", cursive;
+    font-size: 75px;
+    margin-bottom: 30px;
+}

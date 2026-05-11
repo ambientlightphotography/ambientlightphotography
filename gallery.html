@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Gallery</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAV (IMMER GLEICH!) -->
+<nav>
+
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <ul id="menu">
+
+        <li><a href="index.html">Home</a></li>
+
+        <li class="dropdown">
+            <a href="gallery.html">Gallery</a>
+
+            <ul class="dropdown-content">
+                <li><a href="mountains.html">Mountains</a></li>
+                <li><a href="forest.html">Forest</a></li>
+                <li><a href="wildlife.html">Wildlife</a></li>
+                <li><a href="macro.html">Macro</a></li>
+                <li><a href="lakeview.html">Lakeview</a></li>
+                <li><a href="architecture.html">Architecture</a></li>
+            </ul>
+        </li>
+
+        <li><a href="contact.html">Contact</a></li>
+
+    </ul>
+
+</nav>
+
+<h1 class="gallery-title">Gallery</h1>
+
+<div class="gallery-grid" id="gallery"></div>
+
+<!-- FULLSCREEN -->
+<div id="fullscreen">
+
+    <div id="close" onclick="closeImage()">✕</div>
+
+    <div onclick="prevImage()" class="nav left">&lt;</div>
+
+    <img id="fullscreen-img">
+
+    <div onclick="nextImage()" class="nav right">&gt;</div>
+
+    <div id="stars">
+        <span onclick="rate(1)">★</span>
+        <span onclick="rate(2)">★</span>
+        <span onclick="rate(3)">★</span>
+        <span onclick="rate(4)">★</span>
+        <span onclick="rate(5)">★</span>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
